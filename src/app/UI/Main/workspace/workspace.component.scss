@@ -1,0 +1,250 @@
+// General styling for the lighter dark mode theme
+.sidenav-container {
+    background-color: var(--color-dark-grey); // Medium grey background for the container
+    color: var(--color-light-grey); // Light grey text color
+
+    // Styling for the sidenav and its toolbar
+    .sidenav-toolbar {
+        background-color: var(--color-medium-grey); // Slightly lighter grey for the toolbar
+        color: var(--color-white); // White text color for toolbar content
+    }
+
+    // Navigation items styling
+    .mat-nav-list {
+        mat-list-item {
+            font-size: 14px; // Font size for navigation items
+            color: var(--color-lighter-grey); // Lighter grey text color for navigation items
+            padding: 10px 15px; // Padding for navigation items
+        }
+    }
+
+    // Icons inside the sidenav
+    .mat-icon {
+        font-size: 20px; // Icon size
+        color: var(--color-white); // White icon color
+    }
+}
+
+// Main toolbar styling
+.main-toolbar {
+    background-color: var(--color-medium-grey); // Lighter grey for the toolbar
+    color: var(--color-white); // White text color for toolbar items
+
+    // Adjust buttons on the toolbar
+    button {
+        color: var(--color-white); // White text color for buttons
+    }
+
+    // Spacer class to align elements in the toolbar
+    .spacer {
+        flex: 1;
+    }
+
+    // Search bar inside the toolbar
+    .search-bar {
+        color: var(--color-light-grey); // Light grey text color for input
+        height: 30px; // Height of the search bar
+        overflow: hidden; // Hide overflow content
+        display: block;
+        margin-top: 3px;
+
+        input {
+            color: var(--color-light-grey); // Input text color
+            height: 90%; // Input height
+            font-size: 10px; // Font size for input
+            padding: 0; // Padding for input field
+        }
+
+        mat-icon {
+            color: var(--color-medium-grey); // Icon color
+            font-size: 20px; // Icon size
+            margin-right: 8px; // Margin between icon and input field
+        }
+
+        // Add margin to the search button inside the search bar
+        button {
+            height: 100%; // Button height
+        }
+
+        // Adjust for mobile screens
+        @media (max-width: 768px) {
+            width: 100%; // Full-width search bar on mobile
+            height: 36px; // Reduced height on mobile
+
+            input {
+                font-size: 12px; // Smaller font size for mobile
+                padding: 6px; // Padding for input field on mobile
+            }
+        }
+    }
+}
+
+// Typography adjustments
+h4 {
+    font-size: 14px; // Font size for headings
+    font-family: 'Roboto', sans-serif; // Font family for headings
+    color: var(--color-heading-grey); // Lighter grey color for headings
+    font-weight: 450;
+}
+
+// Card styling inside the tab content
+.overview-card {
+    background-color: var(--color-heading-grey); // Card background color
+    color: var(--color-white); // White text color inside the card
+
+    mat-card-title,
+    mat-card-subtitle {
+        color: var(--color-light-grey); // Lighter grey color for card title and subtitle
+    }
+
+    mat-card-content {
+        color: var(--color-light-grey); // Lighter grey color for card content text
+    }
+
+    mat-card-actions {
+        button {
+            color: var(--color-white); // White text color for card action buttons
+        }
+    }
+}
+
+// Tab styling
+.custom-tab-group {
+    .mat-tab-label {
+        color: var(--color-lighter-grey); // Lighter grey color for inactive tab labels
+    }
+
+    .mat-tab-label-active {
+        color: var(--color-white); // White color for active tab label
+    }
+
+    .mat-ink-bar {
+        background-color: var(--color-accent); // Custom ink bar color for active tab
+    }
+}
+
+// Context toolbar styling
+.context-toolbar {
+    position: fixed; // Fixed position on the screen
+    top: 100px; // Distance from the top of the viewport
+    right: 20px; // Distance from the right side of the screen
+    width: 250px; // Fixed width for the toolbar
+    height: 100%; // Full height of the screen
+    background-color: var(--color-toolbar-bg); // Medium grey background color
+    padding: 15px; // Padding for spacing
+    box-shadow: -2px 0 4px var(--color-shadow); // Shadow for elevation
+    z-index: 1000; // Ensure it stays above other content
+    display: flex; // Flex layout for vertical alignment
+    flex-direction: column; // Stack items vertically
+    justify-content: flex-start; // Align items to the top
+    align-items: flex-start; // Align items to the left
+    border-radius: 10px; // Rounded corners
+
+    opacity: 0; // Start fully transparent
+    animation: fadeIn 1s forwards; // Apply fade-in animation
+    animation-delay: 0.5s; // Delay animation by 1 second
+
+    p {
+        color: var(--color-light-grey); // Light grey text color
+        font-size: 14px; // Font size for paragraphs
+        margin-bottom: 15px; // Margin below paragraphs
+    }
+
+    button {
+        margin-bottom: 10px; // Margin below buttons
+        width: 100%; // Full width buttons
+    }
+
+    // Styling for raised buttons
+    .mat-raised-button {
+        background-color: var(--color-button-bg); // Button background color
+        color: var(--color-white); // White text color
+
+        &:hover {
+            background-color: var(--color-button-hover-bg); // Lighter grey on hover
+        }
+    }
+
+    // Styling for stroked buttons (e.g., delete button)
+    .mat-stroked-button {
+        border-color: var(--color-warn); // Red border color for warn buttons
+        color: var(--color-warn); // Red text color for warn actions
+
+        &:hover {
+            background-color: var(--color-warn-hover-bg); // Slight red background on hover
+        }
+    }
+
+    // Accent color buttons
+    .mat-raised-button[color="accent"] {
+        background-color: var(--color-accent); // Accent color for action buttons
+        color: var(--color-white); // White text color
+
+        &:hover {
+            background-color: var(--color-accent-hover); // Lighter accent color on hover
+        }
+    }
+}
+
+// Keyframes for fade-in animation
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+// Context menu styling
+.mat-menu-panel {
+    background-color: var(--color-medium-grey); // Medium grey background color
+    color: var(--color-light-grey); // Light grey text color
+    border-radius: 4px; // Rounded corners
+    box-shadow: 0 2px 10px var(--color-strong-shadow); // Shadow for elevation
+
+    .mat-menu-item {
+        color: var(--color-light-grey); // Light grey text color for menu items
+        padding: 10px 15px; // Padding for menu items
+        font-size: 14px; // Font size for menu items
+        display: flex;
+        align-items: center;
+
+        mat-icon {
+            margin-right: 10px; // Margin between icon and text
+            color: var(--color-white); // White icon color
+        }
+
+        &:hover {
+            background-color: var(--color-icon-hover-bg); // Lighter grey on hover
+            color: var(--color-white); // White text color on hover
+        }
+    }
+
+    .mat-menu-item-disabled {
+        color: var(--color-disabled); // Greyed out text color for disabled menu items
+
+        mat-icon {
+            color: var(--color-disabled); // Greyed out icon color for disabled items
+        }
+    }
+}
+
+// Form field styling
+.mat-mdc-form-field {
+    display: block;
+    min-width: 0;
+    text-align: left;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--mat-form-field-container-text-font, var(--mat-app-body-large-font));
+    font-weight: var(--mat-form-field-container-text-weight, var(--mat-app-body-large-weight));
+    height: 36px;
+    margin-top: 8px;
+    z-index: 1000;
+}
+
+// Navigation list styling
+.mat-mdc-nav-list {
+    .mat-mdc-list-item {
+        border-radius: 0;
+        --mat-mdc-focus-indicator-border-radius: 0;
+    }
+}

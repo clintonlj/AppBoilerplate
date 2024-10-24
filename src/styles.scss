@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+    background-color: #444444;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Correctly defining CSS variables */
+:root {
+    --mat-toolbar-standard-height: 44px;
+    --mat-toolbar-row-height: 44px;
+    --mat-sidenav-container-width: 250px;
+    --mat-form-field-container-height: 34px;
+    --mat-form-field-filled-with-label-container-padding-top: 0;
+    --mat-form-field-filled-with-label-container-padding-bottom: 0;
+    --mdc-list-list-item-hover-state-layer-color: black;
+    --mdc-list-list-item-hover-state-layer-opacity: 0.1;
+    --mat-tab-header-active-focus-label-text-color: #ffffff;
+    --mat-tab-header-inactive-hover-label-text-color: #ffffff;
+    --mat-tab-header-active-hover-label-text-color: #ffffff;
+    --mat-tab-header-active-label-text-color: #ffffff;
+    --mat-tab-header-inactive-label-text-color: #ffffff;
+}
+
+/* Color variables */
+:root {
+    --color-dark-grey: #444444; /* Used for background-color in .sidenav-container */
+    --color-medium-grey: #5a5a5a; /* Used for background-color in .sidenav-toolbar, .main-toolbar, .mat-menu-panel, mat-icon in .search-bar */
+    --color-toolbar-bg: #4a4a4a; /* Used for .context-toolbar background-color */
+    --color-heading-grey: #525252; /* Used for h4 color, .overview-card background-color */
+    --color-button-bg: #616161; /* Used in .mat-raised-button background-color */
+    --color-button-hover-bg: #757575; /* Used in .mat-raised-button:hover background-color */
+    --color-icon-hover-bg: #707070; /* Used in .mat-menu-item:hover background-color */
+    --color-disabled: #888888; /* Used in .mat-menu-item-disabled color and icon */
+
+    --color-light-grey: #e0e0e0; /* Used for text color in .sidenav-container, .search-bar, mat-card-title, mat-card-subtitle, mat-card-content, .mat-menu-panel */
+    --color-lighter-grey: #d0d0d0; /* Used for .mat-nav-list mat-list-item color, .mat-tab-label color */
+
+    --color-warn: #f44336; /* Used in .mat-stroked-button border-color, color */
+    --color-warn-hover-bg: rgba(244, 67, 54, 0.1); /* Used in .mat-stroked-button:hover background-color */
+
+    --color-accent: #ff4081; /* Used in .mat-ink-bar background-color, .mat-raised-button[color="accent"] background-color */
+    --color-accent-hover: #ff5a9a; /* Used in .mat-raised-button[color="accent"]:hover background-color */
+
+    --color-white: #ffffff; /* Used for white text and icons */
+
+    --color-shadow: rgba(0, 0, 0, 0.3); /* Used in .context-toolbar box-shadow */
+    --color-strong-shadow: rgba(0, 0, 0, 0.5); /* Used in .mat-menu-panel box-shadow */
+}
+
